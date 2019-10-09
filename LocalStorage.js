@@ -1,0 +1,29 @@
+class LocalStorage{
+    constructor(){
+        this.defaultCity = 'Karachi';
+        this.defaultCountry = 'PK';
+        this.city;
+        this.country;
+    }
+    getItems(){
+        if(localStorage.getItem('city') === null){
+            this.city = this.defaultCity;
+        }else{
+            this.city = localStorage.getItem('city');
+        }
+        if(localStorage.getItem('country')===null){
+            this.country = this.defaultCountry;
+        }else{
+            this.country = localStorage.getItem('country');
+        }
+        return {
+            city: this.city,
+            country: this.country
+        }
+    }
+
+    store(city,country){
+        localStorage.setItem('city',city);
+        localStorage.setItem('country',country);
+    }
+}

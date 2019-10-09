@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background: #252525;
+    font-family: 'Lato', sans-serif;
+
+}
+.blur{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.container{
+    color:#fff;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.container-box{
+    text-align: center;
+    width: 70%;
+    margin-top:2.3em;
+    position: relative;
+    border: 1px solid grey;
+    padding: .5em 0;
+}
+img{
+    animation: imgAnimate 1.2s infinite alternate;
+}
+@keyframes imgAnimate{
+    from{
+        transform: scale(1.1);
+    }
+    to{
+        transform: scale(1.3);
+    }
+}
+h1{
+    font-size: 1.8em;
+    margin-bottom: .3em;
+}
+h2{
+    margin: .6em auto;
+    font-weight: 500;
+    font-size: 1.2em;
+    border-bottom: 1px solid grey;
+    width: 50%;
+    padding-bottom:.2em;
+    
+}
+.container-box a,.container-box a:visited,.container-box a:link{
+    margin-top:.5em;
+    margin-bottom: .5em;
+    transition: all .3s;
+    text-align: center;
+    color:#fff;
+    text-decoration: none;
+    font-size: 1em;
+    border: 1px solid gray;
+    display: inline-block;
+    padding: .5em 1.5em;
+    font-weight: 500;
+    background:#363636;
+    border-radius: 4px;
+}
+.container-box a:hover{
+    background: #3f3f3f;
+    color:rgb(219, 219, 219);
+}
+.popup{
+    position: absolute;
+    top: 160px;
+    background: rgb(240, 240, 240);
+    color:rgb(24, 24, 24);
+    text-align: center;
+    padding: 1.3em 1.5em;
+    z-index: 9999;
+    display: none;
+    /* animation: moveFromTop 2s 1; */
+    /* animation: moveToTop 2s 1; */
+}
+@keyframes moveFromTop{
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}
+@keyframes moveToTop{
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+.popup input,.popup label{
+    display: block;
+    margin: 0 auto;
+}
+.popup h1{
+    margin-bottom:.8em;
+}
+.popup input[type="text"]{
+    padding: 5px 10px;
+    font-family: 'Lato',sans-serif;
+    color:#525252;
+    font-size: 1em;
+}
+.popup label{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: .4em 0;
+}
+.popup input[type="submit"]{
+     margin-top: 1.5em;
+     padding:.4em 4.5em;
+     font-size:1em ;
+     background: #494949;
+     color:#ececec;
+     border: 0;
+     cursor: pointer;
+     transition: all .3s;
+     font-weight: 600;
+}
+p{
+    margin-top:.6em;
+    color:#3d3d3d;
+    font-size: .9em;
+    text-align: left;
+    margin-left:3.2em;
+    
+}
+.popup input[type="submit"]:hover{
+    background: #7c7c7c;
+    color:#fcfcfc;
+}
+.popup p a{
+    color:#727272;
+}
+.popup p a:hover{
+    color:#9e9e9e;
+}
+@media only screen and (min-width: 330px){
+ h1{
+     font-size: 1.5em;
+ }
+ h2{
+     font-size: 1em;
+ }
+ .popup{
+     top:16%;
+     padding: 1.7em 1em;
+ }
+ .popup form p{
+    margin-left:.7em;
+}
+.popup h1{
+    font-size: 1.5em;
+}
+.popup label{
+    font-size: 1em;
+}
+}
+@media only screen and (min-width: 500px){
+    .container-box{
+        width:60%;
+    }
+
+}
+@media only screen and (min-width: 700px){
+    .container-box{
+        width:50%;
+    }
+    h1{
+        font-size: 1.7em;
+    }
+    h2{
+        font-size: 1.2em;
+    }
+    .popup{
+        top:20%;
+        padding: 1.7em 1.5em;
+    }
+}
+
+@media only screen and (min-width: 875px){
+    .container-box{
+        width: 40%;
+    }
+    
+}
+@media only screen and (min-width: 1100px){
+    .container-box{
+        width: 30%;
+    }
+    .popup{
+        top:17%;
+    }
+    .popup h1{
+        font-size: 1.8em;
+    }
+    .popup label{
+        font-size: 1.3em;
+    }
+    .popup form p{
+        margin-left:2em;
+    }
+}
+@media only screen and (min-width: 1250px){
+    h1{
+        font-size:2em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    .popup{
+        top:23%;
+        padding-top:2.5em;
+        padding-bottom:2.6em;
+        padding-left:2.5em;
+        padding-right:2.5em;
+    }
+    .popup form p{
+        margin-left:2.2em;
+    }
+}

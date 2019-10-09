@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class ="container">
+        <div class = "container-box">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" id="icon">
+            <h1 id = "temp">30 <sup>o</sup>C</h1>
+            <h1 id="city">Hyderabad,PK</h1>
+            <h2 id="main">Rain</h2>
+            <h2 id="description">light rain</h2>
+            <h2 id="max">Max: 33 <sup>o</sup>C </h2>
+            <h2 id ="min">Min: 25 <sup>o</sup>C</h2>
+            <h2 id="humidity">Humidity: 75%</h2>
+            <a href="#" id="change">CHANGE CITY</a>
+        </div>
+        <div class="popup">
+            <form>
+                <h1>SELECT YOUR CITY</h1>
+                <label for="city">City</label>
+                <input type="text" name="city" id = "popup-city">
+                <br>
+                <label for="country">Country Code</label>
+                <input type="text" name="country" id = "popup-country">
+                <p>Enter 2 digit Country code <br> e.g: US,GB. <br> See the list <a href="https://www.nationsonline.org/oneworld/country_code_list.htm" target="_blank">here</a> </p>
+                <input type="submit" value="Change" id="popup-change">
+            </form>
+        </div>
+    </div>
+    <script src="weather.js"></script>
+    <script src="LocalStorage.js"></script>
+    <script src="UserInterface.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
