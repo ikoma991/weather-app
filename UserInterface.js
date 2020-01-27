@@ -40,13 +40,27 @@ class UserInterface{
         UserInterface.allInputs.forEach(el=>el.value='');
     }
 
-     static checkInputs(){
-         UserInterface.allInputs.forEach(el=>{
-             if(el.value !== '' && UserInterface.reg.test(UserInterface.allInputs[1].value) ){
-                 UserInterface.changeWeatherPopup.removeAttribute('disabled');
-             }
-         });
-     }
+    static checkInputs(e) {
+        let count=0;
+        UserInterface.allInputs.forEach(el => {
+          if (el.value == "") {
+            count++;
+          }
+        });
+        if(count==0){
+          if(e.target.id === "popup-country"){
+            if(UserInterface.reg.test(e.target.value)){
+              UserInterface.changeWeatherPopup.removeAttribute("disabled");
+              console.log("Valid!");
+            }else{
+              UserInterface.changeWeatherPopup.setAttribute("disabled", "");
+            }
+          }
+        
+        }
+     
+      }
+    
 
      display(weather){
         this.icon.src = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`
